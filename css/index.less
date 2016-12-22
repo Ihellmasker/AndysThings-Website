@@ -1,0 +1,68 @@
+@pastel-purple: #b19cd9;
+
+body {
+    color: #FFF;
+}
+
+.transform(@param) {
+    -webkit-transform: @param;
+    -moz-transform: @param;
+    -ms-transform: @param;
+    transform: @param;
+}
+
+.wrapper {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    
+    background-color: @pastel-purple;
+    
+    border: 15px solid #FFF;
+    
+    padding: 50px;
+}
+
+.logo {
+    position: absolute;
+    left: 50px;
+    right: 50px;
+    text-align: center;
+
+    .top {
+        font-size: 2.5rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        line-height: 2rem
+    }
+    .bottom {
+        font-size: 1.5rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 10px;
+        text-indent: 10px;
+    }
+}
+
+.mid-text {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    right: 50px;
+    text-align: center;
+    
+    .transform(translatey(-50%));
+    
+    .main {
+        font-size: 6rem;
+        font-weight: 300;
+    }
+    .sub {
+        font-size: 1.5rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+    }
+}
